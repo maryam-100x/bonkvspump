@@ -14,8 +14,8 @@ export function useTokenStats(mint) {
     const fetchStats = async () => {
       setLoading(true);
       try {
-        //const res = await fetch(`http://localhost:3001/api/bitquery?mint=${mint}`);
-        const res = await fetch(`/api/bitquery?mint=${mint}`);
+        const res = await fetch(`http://localhost:3001/api/bitquery?mint=${mint}`);
+        // const res = await fetch(`/api/bitquery?mint=${mint}`);
         const json = await res.json();
 
         if (!res.ok) throw new Error(json.error || "Unknown error");
